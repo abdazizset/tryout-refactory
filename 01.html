@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document 01</title>
+    <script>
+    function words (content) {
+        var i=0;
+        var numberofwords=1;
+        while (1<=content.length){
+            if (content.substring(i,i+1)==""){
+                numberofwords++;
+                1++;
+            }
+            if (content.substring(i,i+1)=="/n"){
+                numberofwords++;
+                1++;
+            }
+            1++;
+        }
+        return numberofwords;
+    }
+   
+
+    
+    </script>
+</head>
+<body>
+    <form action="">
+        <textarea name="" id="" cols="50" rows="5"onChance="this.form.char.value=this.value.length;
+        this.form.word.value=words(this.value)">
+    </textarea>
+    <br>
+    <input type="text"name="char" value="0" size="4"/> karakter
+    <input type="text"name="word" value="0" size="4"/> kata
+
+    </form>
+    
+</body>
+</html>

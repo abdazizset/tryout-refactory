@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document 14</title>
+    
+    
+</head>
+<body>
+    <select class="items">
+        <option value="">pilihlah umur dibawah 21 tahun</option>
+    </select>
+    <dl>
+        <dt>no</dt>
+        <dd class="id"></dd>
+        <dt>Name</dt>
+        <dd class="name"></dd>
+        <dt>Usia</dt>
+        <dd class="age"></dd>
+    </dl>
+    <script>
+   const people=[
+    {id:1, name: 'udin', age: 12},
+    {id:2, name: 'wati', age: 51},
+    {id:3, name: 'budi', age: 34},
+    {id:4, name: 'agus', age: 16},
+    {id:5, name: 'sari', age: 19},
+    {id:6, name: 'ririn', age: 21},
+]
+var $items =$('items');
+var $id =$('id');
+var $name =$('name');
+var $age =$('age');
+people.forEach(funtion(item, i){
+    $items.append('<option value="' + i + '">' + item.name + '</option>')
+});
+
+$items.on('chance', funtion(){
+    var people = people[$items.val()]
+    if (people){
+        $id.html(people.id)
+        $name.html(people.name)
+        $age.html(people.id)
+    }
+    console.log($items.val();)
+});
+    </script>
+        
+    
+    
+</body>
+</html>
